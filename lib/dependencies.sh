@@ -32,7 +32,6 @@ run_if_present() {
   local has_script=$(read_json "$BUILD_DIR/package.json" ".scripts[\"$script_name\"]")
   if [ -n "$has_script" ]; then
     if $YARN; then
-      echo "Running $script_name (yarn)"
       yarn run "$script_name"
     else
       echo "Running $script_name"
