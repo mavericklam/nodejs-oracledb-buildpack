@@ -4,13 +4,12 @@ install_oracle_libraries(){
   echo "Installing oracle libraries"
   mkdir -p $build_dir/oracle
   cd $build_dir/oracle
+  cp $BUILDPACK_PATH/instantclient.zip instantclient.zip
   echo FUCK
   pwd
-  ls $build_dir
-  ls $build_dir/..
   local basic_download_url="https://test.com"
-  curl ftp://mavericklam.jios.org:3001/instantclient_12_2.zip -o instantclient.zip -u pi:lam
-  echo "Downloaded"
+  ##curl ftp://mavericklam.jios.org:3001/instantclient_12_2.zip -o instantclient.zip -u pi:lam
+  ##echo "Downloaded"
   echo "unzipping libraries"
   unzip instantclient.zip
   mv instantclient_12_2 instantclient
