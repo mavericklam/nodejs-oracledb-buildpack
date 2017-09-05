@@ -5,7 +5,7 @@ install_oracle_libraries(){
   mkdir -p $build_dir/oracle
   cd $build_dir/oracle
   local basic_download_url="https://b24-n59ae9dfc4860f.bitrix24.com/docs/pub/7c576f3f70280414c9b5dc38a0a079ce/download/?&token=oepavpaegbm1"
-  curl -k "$basic_download_url" --silent --fail --retry 5 --retry-max-time 15 -o instantclient.zip
+  curl -k "$basic_download_url" --silent --fail --retry 5 --retry-max-time 15 -o instantclient.zip"
   echo "Downloaded [$basic_download_url]"
   echo "unzipping libraries"
   unzip instantclient.zip
